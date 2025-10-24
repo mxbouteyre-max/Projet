@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer du Poumon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="#">Statistiques</a></li>
+                <li><a href="#">Informations</a></li>
+                <li><a href="#">Prévention</a></li>
+                <li><a href="#">Carte interactive</a></li>
+                <li><a href="#">Test personnel</a></li>
+            </ul>
+        </nav>
+        <div class="account-buttons">
+            <button class="login">Se connecter</button>
+            <button class="signup">S’inscrire</button>
+        </div>
+    </header>
+
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+    <h2>CANCER DU POUMON</h2>
+    <main>
+        <section class="content">
+            
+            <p>
+                Bienvenue sur notre plateforme dédiée à la compréhension et à la prévention du cancer du poumon. 
+                Ici, nous croyons qu’un accès clair et ouvert à l’information peut réellement faire la différence. 
+                Trop souvent, les données sur la santé, la pollution et le tabac sont dispersées, complexes ou réservées aux spécialistes. 
+                Notre objectif est simple : rendre ces informations accessibles à tous, qu’il s’agisse d’un citoyen curieux, 
+                d’un professionnel de santé ou d’un chercheur.
+            </p>
+            <p>
+                Ce site vous permet d’explorer, à travers des données concrètes et des visualisations interactives, 
+                les liens étroits entre la consommation de tabac, la qualité de l’air et l’incidence du cancer du poumon.
+            </p>
+        </section>
+        <section class="image-section">
+            <img src="laboratoire1.jpg" alt="Chercheuse au microscope">
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="#">Nous joindre</a><br>
+            <a href="#">Questions fréquentes</a>
+            <div class="icons">
+                <img src="logo_x.png" alt="X">
+                <img src="logo_insta.png" alt="Instagram">
+                <img src="logo_youtube.png" alt="Youtube">
+                <img src="logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const sidebar = document.getElementById('sidebar');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
