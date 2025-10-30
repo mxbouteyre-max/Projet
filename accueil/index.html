@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="burger" id="burger">
+        <div class="menu" id="menu">
             <span></span>
             <span></span>
             <span></span>
@@ -56,25 +56,25 @@
             <a href="#">Nous joindre</a><br>
             <a href="#">Questions fréquentes</a>
             <div class="icons">
-                <img src="logo_x.png" alt="X">
-                <img src="logo_insta.png" alt="Instagram">
-                <img src="logo_youtube.png" alt="Youtube">
-                <img src="logo_linkedin.png" alt="Linkedin">
+                <img src="footer/logo_x.png" alt="X">
+                <img src="footer/logo_insta.png" alt="Instagram">
+                <img src="footer/logo_youtube.png" alt="Youtube">
+                <img src="footer/logo_linkedin.png" alt="Linkedin">
             </div>
         </div>
         <div class="footer-logo">
             <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
-            <img src="logo_poumon.png" alt="Logo organisation">
+            <img src="footer/logo_poumon.png" alt="Logo organisation">
             
         </div>
     </footer>
 
     <script>
-        const burger = document.getElementById('burger');
+        const menu = document.getElementById('menu');
         const sidebar = document.getElementById('sidebar');
 
-        burger.addEventListener('click', () => {
-            burger.classList.toggle('active');
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
             sidebar.classList.toggle('open');
         });
     </script>

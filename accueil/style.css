@@ -20,8 +20,8 @@ header {
     padding: 20px;
 }
 
-/* --- BURGER --- */
-.burger {
+/* --- MENU --- */
+.menu {
     position: fixed;
     left: 60px;
     top: 20px;
@@ -40,7 +40,7 @@ header {
 
 
 
-.burger span {
+.menu span {
     display: block;
     height: 1.25px;
     width: 50px;
@@ -48,7 +48,7 @@ header {
     transition: background-color 0.3s;
 }
 
-.burger.active span {
+.menu.active span {
     background-color: #D9E9CF; /* vert clair quand ouvert */   
     
 }
