@@ -1,0 +1,241 @@
+/* --- RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5; 
+    color: #1a1a1a;
+}
+
+/* --- HEADER --- */
+header {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- MENU --- */
+.menu {
+    position: fixed;
+    left: 60px;
+    top: 20px;
+    width: 45px; /* zone large pour le clic */
+    height: 45px; /* idem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* espace constant entre les barres */
+    cursor: pointer;
+    z-index: 1001;
+    background-color: transparent;
+}
+
+
+
+
+.menu span {
+    display: block;
+    height: 1.25px;
+    width: 50px;
+    background-color: #445446; /* foncé quand fermé */
+    transition: background-color 0.3s;
+}
+
+.menu.active span {
+    background-color: #D9E9CF; /* vert clair quand ouvert */   
+    
+}
+
+
+
+/* --- SIDEBAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 170px;
+    background-color: #445446; /* vert foncé */
+    padding-top: 80px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+}
+
+nav.open {
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 0;
+}
+
+nav li {
+    margin: 60px 0; /* espace vertical entre les lignes */
+    display: flex;
+    align-items: center;
+    font-weight: 1px;           /* écriture bien fine */
+}
+
+nav li::before {
+    content: "•";               /* petit point */
+    color: #D9E9CF;             
+    font-size: 18px;
+    margin-right: 10px;         /* espace entre le point et le texte */
+    margin-left:20px;
+}
+
+
+nav a {
+    color: #D9E9CF; /* vert clair */
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-left: 10px;         /* légère marge interne */           /* espace entre les lignes */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D9E9CF;
+}
+
+/* --- LOGIN / SIGNUP --- */
+.account-buttons {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+.account-buttons button {
+    background-color: #dde2eb;
+    border: 1px solid #a0aec0;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.account-buttons button:hover {
+    background-color: #cbd5e1;
+}
+
+/* --- MAIN --- */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 50px 100px;
+    margin-left: 180px;
+
+    gap: 40px;
+}
+
+.content {
+    max-width: 60%;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight:200;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    margin-bottom: 15px;
+    margin: 40px 190px;
+}
+
+h2 {
+    font-size: 64px;              /* plus grand */
+    font-weight: 200;             /* plus fin */
+    letter-spacing: 2px;          /* aère un peu les lettres */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin: 40px 180px;
+}
+
+.content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* --- IMAGE --- */
+.image-section img {
+    max-width: 450px;
+    border-radius: 6px;
+    object-fit: cover;
+    opacity: 0.8;           /* opacité réduite */
+    margin-top: 20px;       /* décale vers le bas */
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #f8f8f8;
+    padding-right: 70px;
+    padding-left: 100px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #ddd;
+}
+
+footer .contact{
+    margin-left : 90px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.icons img {
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    text-align: right;
+    margin-top: 10px;
+    align-items: center;       /* aligne verticalement le texte et le logo */
+    gap: 20px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 300;          /* écriture fine et élégante */
+  text-align: center;         /* pour que le texte s’aligne à droite du logo */
+  font-variant: small-caps;
+}
+
+.footer-logo img {
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+}

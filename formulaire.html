@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire - Organisation de recherche sur le cancer du poumon</title>
+  <link rel="stylesheet" href="style_formulaire.css">
+
+</head>
+
+
+<body>
+
+  <header>
+         <!-- MENU LATERAL -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="info.html">Informations</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="carte.html">Carte interactive</a></li>
+                <li><a href="formulaire.html">Test personnel</a></li>
+            </ul>
+        </nav>
+        <button class="home-btn" onclick="window.location.href='index.html'">
+          <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+          <span>Accueil</span>
+        </button>
+    </header>
+
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+
+
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="main-content">
+    <h2>FORMULAIRE</h2>
+    <p>Ce formulaire permet de savoir si vous êtes susceptible de développer un cancer du poumon, basé sur votre tabagisme, votre lieu de résidence et vos antécédents.</p>
+    <p>À la fin du questionnaire, vous serez orienté(e) vers votre résultat personnalisé.</p>
+
+
+<form class="container">
+  <!-- Section 1 -->
+  <div class="section">
+    <h3>1. Informations générales</h3>
+    <label>Âge :</label>
+    <input type="number" name="age" min="1" max="120" required placeholder="Âge en années">
+
+    <label>Sexe :</label>
+    <div class="gender">
+      <label><input type="radio" name="sexe" value="femme"> Femme</label>
+      <label><input type="radio" name="sexe" value="homme"> Homme</label>
+    </div>
+
+    <label>Taille :</label>
+    <input type="number" name="taille" min="50" max="250" placeholder="cm">
+
+    <label>Poids :</label>
+    <input type="number" name="poids" min="20" max="250" placeholder="kg">
+
+    <label>Pays :</label>
+    <input type="text" name="pays">
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section">
+    <h3>2. Habitudes de tabagisme</h3>
+
+    <label>Quelle est votre situation actuelle vis-à-vis du tabac ?</label>
+    <div>
+      <label><input type="radio" name="situation_tabac" value="jamais"> Je n’ai jamais fumé</label><br>
+      <label><input type="radio" name="situation_tabac" value="actuellement"> Je fume actuellement (régulièrement)</label><br>
+      <label><input type="radio" name="situation_tabac" value="occasionnellement"> Je fume occasionnellement (par ex. lors de soirées, rarement)</label><br>
+      <label><input type="radio" name="situation_tabac" value="arrete"> J’ai arrêté de fumer</label>
+    </div>
+
+    <label>Si vous fumez actuellement ou occasionnellement :</label>
+    <label>Depuis combien d’années ?</label>
+    <input type="number" name="duree_tabac" min="0" placeholder="années">
+
+    <label>En moyenne, combien de cigarettes par jour ?</label>
+    <div>
+      <label><input type="radio" name="cigarettes_jour" value="moins1"> Moins d’une par jour</label><br>
+      <label><input type="radio" name="cigarettes_jour" value="1_5"> Entre 1 et 5 par jour</label><br>
+      <label><input type="radio" name="cigarettes_jour" value="plus5"> Plus de 5 par jour</label>
+    </div>
+
+    <label>Si vous avez arrêté de fumer :</label>
+    <label>Depuis combien d’années ?</label>
+    <input type="number" name="arrete_annees" min="0" placeholder="années">
+
+    <label>Êtes-vous exposé(e) régulièrement à la fumée passive ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="fumee_passive" value="oui"> Oui</label>
+      <label><input type="radio" name="fumee_passive" value="non"> Non</label>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section">
+    <h3>3. Antécédents médicaux</h3>
+
+    <label>Avez-vous déjà eu une maladie respiratoire chronique (BPCO, emphysème, asthme) ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="maladie_respiratoire" value="oui"> Oui</label>
+      <label><input type="radio" name="maladie_respiratoire" value="non"> Non</label>
+    </div>
+
+    <label>Avez-vous déjà été diagnostiqué(e) avec un autre cancer ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="autre_cancer" value="oui"> Oui</label>
+      <label><input type="radio" name="autre_cancer" value="non"> Non</label>
+    </div>
+
+    <label>Y a-t-il des antécédents de cancer du poumon dans votre famille proche ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="cancer_famille" value="oui"> Oui</label>
+      <label><input type="radio" name="cancer_famille" value="non"> Non</label>
+    </div>
+
+    <label>Êtes-vous suivi(e) pour une exposition professionnelle (amiante, radon, métaux lourds) ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="exposition_pro" value="oui"> Oui</label>
+      <label><input type="radio" name="exposition_pro" value="non"> Non</label>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section">
+    <h3>4. Expositions environnementales</h3>
+
+    <label>Dans quel pays habitez-vous ?</label>
+    <input type="text" name="pays_habite">
+
+    <label>Travaillez-vous dans un environnement contenant de la poussière, de la suie ou des produits chimiques ?</label>
+    <div class="yesno">
+      <label><input type="radio" name="produits_chimiques" value="oui"> Oui</label>
+      <label><input type="radio" name="produits_chimiques" value="non"> Non</label>
+    </div>
+  </div>
+
+  <button type="submit">Envoyer</button>
+</form>
+
+
+  <footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="#">Nous joindre</a><br>
+            <a href="#">Questions fréquentes</a>
+            <div class="icons">
+                <img src="bas_de_page/logo_x.png" alt="X">
+                <img src="bas_de_page/logo_insta.png" alt="Instagram">
+                <img src="bas_de_page/logo_youtube.png" alt="Youtube">
+                <img src="bas_de_page/logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="bas_de_page/logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const sidebar = document.getElementById('sidebar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
+
+</body>
+</html>
