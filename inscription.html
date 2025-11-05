@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - ORSCP</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; }
+        form { background-color: #5b6690; color: white; display: inline-block; padding: 30px; border-radius: 10px; margin-top: 50px; }
+        input { padding: 8px; margin: 8px; width: 250px; border-radius: 5px; border: none; }
+        input.valid { border: 2px solid green; }
+        input.invalid { border: 2px solid red; }
+        .error-message { color: #ffcccc; font-size: 0.9em; }
+        button { background-color: white; color: #5b6690; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        #feedback { margin-top: 15px; font-weight: bold; }
+        .checkbox-container { display: flex; align-items: center; justify-content: center; margin-top: 10px; }
+        .checkbox-container input[type="checkbox"] { width: 18px; height: 18px; margin-right: 10px; }
+        a { color: white; text-decoration: underline; }
+        a:hover { text-decoration: none; }
+        .footer-link { margin-top: 10px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<h1>S’INSCRIRE</h1>
+
+<form id="form-inscription" autocomplete="off">
+    <p>
+        Adresse mail :<br>
+        <input type="email" id="email" name="email" required>
+        <br><span id="error-email" class="error-message"></span>
+    </p>
+    <p>
+        Mot de passe :<br>
+        <input type="password" id="mdp1" name="mdp1" required>
+        <br><span id="error-mdp1" class="error-message"></span>
+    </p>
+    <p>
+        Confirmation du mot de passe :<br>
+        <input type="password" id="mdp2" required>
+        <br><span id="error-mdp2" class="error-message"></span>
+    </p>
+
+    <div class="checkbox-container">
+        <input type="checkbox" id="newsletter">
+        <label for="newsletter">J’accepte de recevoir par e-mail les actualités et mises à jour du site.</label>
+    </div>
+  
+
+    <p><button type="button" id="submitBtn" disabled>S’inscrire</button></p>
+
+
+    <div class="footer-link">
+        Si vous avez déjà un compte : <a href="connexion.html">Se connecter</a>
+    </div>
+</form>
+
+<div id="feedback"></div>
+
+<script>
+$(document).ready(function() {
+    function validateField(id, condition, message) {
+        const input = $('#' + id);
+        const error = $('#error-' + id);
+        if (condition) {
+            input.removeClass('invalid').addClass('valid');
+            error.text('');
+        } else {
+            input.removeClass('valid').addClass('invalid');
+            error.text(message);
+        }
+    }
+
+    function validateForm() {
+        const allValid = $('input[type="email"], input[type="password"]').toArray().every(el => $(el).hasClass('valid'));
+        $('#submitBtn').prop('disabled', !allValid);
+    }
+
+    function checkEmailExists(email) {
+        return $.ajax({
+            url: 'verif_mail.php',
+            method: 'POST',
+            dataType: 'json',
+            data: { email: email }
+        });
+    }
+
+    $('input').on('input', function() {
+        const id = $(this).attr('id');
+        const val = $(this).val().trim();
+
+        if (id === 'email') {
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(val)) {
+                validateField(id, false, "Format d'adresse e-mail invalide.");
+                validateForm();
+                return;
+            }
+            checkEmailExists(val)
+            .done(function(res) {
+                console.log("Réponse AJAX :", res);
+                if (res.exists) {
+                    validateField(id, false, "Cette adresse e-mail est déjà utilisée.");
+                } else {
+                    validateField(id, true, '');
+                }
+                validateForm();
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                console.error("Erreur AJAX :", textStatus, errorThrown);
+                console.log("Réponse brute :", jqXHR.responseText);
+                validateField(id, false, "Erreur lors de la vérification de l'email.");
+                validateForm();
+            });
+
+        } else if (id === 'mdp1') {
+            const pwdRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+            validateField(id, pwdRegex.test(val), "Mot de passe faible (min 6 caractères, 1 lettre, 1 chiffre, 1 caractère spécial).");
+            if ($('#mdp2').val() !== '') $('#mdp2').trigger('input');
+        } else if (id === 'mdp2') {
+            const pwd1 = $('#mdp1').val();
+            validateField(id, val === pwd1 && val !== '', "Les mots de passe ne correspondent pas.");
+        }
+        validateForm();
+    });
+
+    $('#submitBtn').on('click', function() {
+        $.ajax({
+            url: 'enregistrement.php',
+            method: 'POST',
+            dataType: 'json',
+            data: {
+                email: $('#email').val(),
+                mdp1: $('#mdp1').val(),
+                newsletter: $('#newsletter').is(':checked') ? 1 : 0 // facultatif
+            },
+            success: function(res) {
+                if (res.success) {
+                    $('#feedback').css('color', 'green').text(res.message);
+                    setTimeout(() => window.location.href = 'connexion.html', 1000);
+                } else {
+                    $('#feedback').css('color', 'red').text(res.message);
+                }
+            },
+            error: function() {
+                $('#feedback').css('color', 'red').text("Erreur serveur.");
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
