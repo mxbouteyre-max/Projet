@@ -1,0 +1,111 @@
+/* --- BOUTON ACCUEIL --- */
+.home-btn {
+    display: flex;
+    background: none;
+    border: none;
+    vertical-align: middle;
+    padding: 8px;
+    cursor: pointer;
+    position: fixed;   
+    top: 20px;         
+    right: 20px;        
+    z-index: 1001;     
+    flex-direction: column; 
+    align-items: center;    
+    gap: 5px;          
+}
+
+.home-btn span {
+    font-size: 12px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.home-btn img {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    transition: transform 0.2s ease; /* zoom fluide */
+}
+
+/* effet au survol : juste zoomer */
+.home-btn:hover img {
+    transform: scale(1.1);
+}
+
+.home-btn:hover {
+    background: none;
+    outline: none;
+}
+
+
+
+body { 
+    text-align: center; 
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f5; 
+}
+
+h2{
+    font-size: 30px;              /* plus grand */
+    font-weight: 200;             /* plus fin */
+    letter-spacing: 2px;          /* aère un peu les lettres */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    margin-top: 100px;
+}
+
+form { 
+    background-color: #5b6690; 
+    color: white; 
+    display: inline-block; 
+    padding: 40px 60px; 
+    border-radius: 10px; 
+    margin-top: 30px; 
+}
+
+input { 
+    padding: 8px; 
+    margin: 8px; 
+    width: 250px; 
+    border-radius: 5px; 
+    border: none; 
+}
+
+button { 
+    background-color: white; 
+    color: #5b6690; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.checkbox-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 10px; 
+}
+        
+.checkbox-container input[type="checkbox"] { 
+    width: 18px; 
+    height: 18px; 
+    margin-right: 10px; 
+}
+
+a { 
+    color: white; 
+    text-decoration: underline; 
+}
+        
+a:hover { 
+    text-decoration: none; 
+}
+
+.footer-link { 
+    margin-top: 10px; font-size: 0.9em; 
+}

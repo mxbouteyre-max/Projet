@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion - ORSCP</title>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; background-color: #f5f5f5; }
-        form { background-color: #5b6690; color: white; display: inline-block; padding: 30px; border-radius: 10px; margin-top: 50px; }
-        input { padding: 8px; margin: 8px; width: 250px; border-radius: 5px; border: none; }
-        button { background-color: white; color: #5b6690; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
-         .checkbox-container { display: flex; align-items: center; justify-content: center; margin-top: 10px; }
-        .checkbox-container input[type="checkbox"] { width: 18px; height: 18px; margin-right: 10px; }
-        a { color: white; text-decoration: underline; }
-        a:hover { text-decoration: none; }
-        .footer-link { margin-top: 10px; font-size: 0.9em; }
-    </style>
+    <link rel="stylesheet" href="style/style_connexion.css">
 </head>
 <body>
 
-<h2>Connexion</h2>
+<header>
+    <button class="home-btn" onclick="window.location.href='index.html'">
+        <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+        <span>Accueil</span>
+    </button>
+</header>
+
+<h2>Se connecter</h2>
 <form method="POST" action="connecter.php">
     <p>Email :<br><input type="email" name="email" required></p>
     <p>Mot de passe :<br><input type="password" name="mdp" required></p>

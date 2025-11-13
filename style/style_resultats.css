@@ -1,0 +1,293 @@
+/* --- HEADER --- */
+header {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- MENU --- */
+.menu {
+    position: fixed;
+    left: 60px;
+    top: 20px;
+    width: 45px; /* zone large pour le clic */
+    height: 45px; /* idem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* espace constant entre les barres */
+    cursor: pointer;
+    z-index: 1001;
+    background-color: transparent;
+}
+
+
+.menu span {
+    display: block;
+    height: 1.25px;
+    width: 50px;
+    background-color: #445446; /* foncé quand fermé */
+    transition: background-color 0.3s;
+}
+
+.menu.active span {
+    background-color: #D9E9CF; /* vert clair quand ouvert */   
+    
+}
+
+
+
+/* --- SIDEBAR --- */
+nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 170px;
+    background-color: #445446; /* vert foncé */
+    padding-top: 80px;
+    transition: left 0.4s ease;
+    z-index: 1000;
+}
+
+nav.open {
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 0;
+}
+
+nav li {
+    margin: 60px 0; /* espace vertical entre les lignes */
+    display: flex;
+    align-items: center;
+    font-weight: 1px;           /* écriture bien fine */
+}
+
+nav li::before {
+    content: "•";               /* petit point */
+    color: #D9E9CF;             
+    font-size: 18px;
+    margin-right: 10px;         /* espace entre le point et le texte */
+    margin-left:20px;
+}
+
+
+nav a {
+    color: #D9E9CF; /* vert clair */
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding-left: 10px;         /* légère marge interne */           /* espace entre les lignes */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #D9E9CF;
+}
+
+/* --- BOUTON ACCUEIL --- */
+.home-btn {
+    display: flex;
+    background: none;
+    border: none;
+    vertical-align: middle;
+    padding: 8px;
+    cursor: pointer;
+    position: fixed;   
+    top: 20px;         
+    right: 20px;        
+    z-index: 1001;     
+    flex-direction: column; 
+    align-items: center;    
+    gap: 5px;          
+}
+
+.home-btn span {
+    font-size: 12px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+.home-btn img {
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+    transition: transform 0.2s ease; /* zoom fluide */
+}
+
+/* effet au survol : juste zoomer */
+.home-btn:hover img {
+    transform: scale(1.1);
+}
+
+.home-btn:hover {
+    background: none;
+    outline: none;
+}
+
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f7f7f7;
+margin: 0;
+padding: 40px;
+color: #222;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight:200;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    margin-bottom: 15px;
+    margin: 40px 190px;
+}
+
+h2 {
+text-align: center;
+font-size: 26px;
+margin-bottom: 10px;
+}
+
+h2 {
+text-align: center;
+color: #0d2c5a;
+margin-top: 0;
+}
+
+.profil, .conseils {
+width: 70%;
+margin: 40px auto;
+padding: 20px;
+border-radius: 6px;
+}
+
+.profil {
+background-color: #0d2c5a;
+color: white;
+}
+
+.profil h3 {
+text-align: center;
+}
+
+.conseils {
+border: 9px solid #a23224;
+background-color: #fff5f5;
+}
+
+.conseils h3 {
+color: #a23224;
+text-align: center;
+}
+
+ul {
+list-style: disc;
+padding-left: 20px;
+}
+
+.profil, .conseils_faible {
+width: 70%;
+margin: 40px auto;
+padding: 20px;
+border-radius: 6px;
+}
+
+.conseils_faible {
+border: 2px solid #F78080 ;
+background-color: #fff5f5;
+}
+
+.conseils_faible h3 {
+color: #F78080;
+text-align: center;
+}
+
+.profil, .conseils_modere {
+width: 70%;
+margin: 40px auto;
+padding: 20px;
+border-radius: 6px;
+}
+
+.conseils_modere {
+border: 5px solid #C74141;
+background-color: #fff5f5;
+}
+.conseils_modere h3 {
+color: #C74141;
+text-align: center;
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+    background-color: #f8f8f8;
+    padding-right: 70px;
+    padding-left: 100px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #ddd;
+}
+
+footer .contact{
+    margin-left : 90px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.icons img {
+    height: 20px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.footer-logo {
+    display: flex;
+    text-align: right;
+    margin-top: 10px;
+    align-items: center;       /* aligne verticalement le texte et le logo */
+    gap: 20px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 300;          /* écriture fine et élégante */
+  text-align: center;         /* pour que le texte s’aligne à droite du logo */
+  font-variant: small-caps;
+}
+
+.footer-logo img {
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: 10px;
+}

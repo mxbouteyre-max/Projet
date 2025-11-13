@@ -4,26 +4,18 @@
     <meta charset="UTF-8">
     <title>Inscription - ORSCP</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f5f5f5; }
-        form { background-color: #5b6690; color: white; display: inline-block; padding: 30px; border-radius: 10px; margin-top: 50px; }
-        input { padding: 8px; margin: 8px; width: 250px; border-radius: 5px; border: none; }
-        input.valid { border: 2px solid green; }
-        input.invalid { border: 2px solid red; }
-        .error-message { color: #ffcccc; font-size: 0.9em; }
-        button { background-color: white; color: #5b6690; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; }
-        button:disabled { background-color: #ccc; cursor: not-allowed; }
-        #feedback { margin-top: 15px; font-weight: bold; }
-        .checkbox-container { display: flex; align-items: center; justify-content: center; margin-top: 10px; }
-        .checkbox-container input[type="checkbox"] { width: 18px; height: 18px; margin-right: 10px; }
-        a { color: white; text-decoration: underline; }
-        a:hover { text-decoration: none; }
-        .footer-link { margin-top: 10px; font-size: 0.9em; }
-    </style>
+    <link rel="stylesheet" href="style/style_inscription.css">
 </head>
 <body>
 
-<h1>S’INSCRIRE</h1>
+<header>
+    <button class="home-btn" onclick="window.location.href='index.html'">
+        <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+        <span>Accueil</span>
+    </button>
+</header>
+
+<h2>S’inscrire</h2>
 
 <form id="form-inscription" autocomplete="off">
     <p>

@@ -4,42 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulaire - Organisation de recherche sur le cancer du poumon</title>
-  <link rel="stylesheet" herf="style_formulaire.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="style/style_formulaire.css">
+
 </head>
+
+
 <body>
 
-  <!-- BARRE SUPERIEURE -->
-  <div class="topbar">
-    <div class="topbar-left">
-      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-      <div class="institute-name">Organisation de Recherche sur le Cancer du Poumon</div>
-    </div>
-    <button class="home-btn" onclick="window.location.href='index.html'">
-      <img src="accueille.png" alt="Accueil">
-    </button>
-  </div>
+  <header>
+         <!-- MENU LATERAL -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="info.html">Informations</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="carte.html">Carte interactive</a></li>
+                <li><a href="formulaire.html">Test personnel</a></li>
+            </ul>
+        </nav>
+        <button class="home-btn" onclick="window.location.href='index.html'">
+          <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+          <span>Accueil</span>
+        </button>
+    </header>
 
-  <!-- MENU LATERAL -->
-  <div class="sidebar closed" id="sidebar">
-    <a href="stat.html">Statistique</a>
-    <a href="info.html">Informations</a>
-    <a href="prevention.html">Prévention</a>
-    <a href="carte.html">Carte</a>
-    <a href="formulaire.html">Formulaire</a>
-  </div>
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+
+
 
   <!-- CONTENU PRINCIPAL -->
   <div class="main-content">
-    <header>
-      <h1>FORMULAIRE</h1>
-      <p>Ce formulaire permet de savoir si vous êtes susceptible de développer un cancer du poumon, basé sur votre tabagisme, votre lieu de résidence et vos antécédents.</p>
-      <p>À la fin du questionnaire, vous serez orienté(e) vers votre résultat personnalisé.</p>
-    </header>
+    <h2>FORMULAIRE</h2>
+    <p>Ce formulaire permet de savoir si vous êtes susceptible de développer un cancer du poumon, basé sur votre tabagisme, votre lieu de résidence et vos antécédents.</p>
+    <p>À la fin du questionnaire, vous serez orienté(e) vers votre résultat personnalisé.</p>
+
 
 <form class="container">
   <!-- Section 1 -->
   <div class="section">
-    <h2>1. Informations générales</h2>
+    <h3>1. Informations générales</h3>
     <label>Âge :</label>
     <input type="number" name="age" min="1" max="120" required placeholder="Âge en années">
 
@@ -54,11 +62,14 @@
 
     <label>Poids :</label>
     <input type="number" name="poids" min="20" max="250" placeholder="kg">
+
+    <label>Pays :</label>
+    <input type="text" name="pays">
   </div>
 
   <!-- Section 2 -->
   <div class="section">
-    <h2>2. Habitudes de tabagisme</h2>
+    <h3>2. Habitudes de tabagisme</h3>
 
     <label>Quelle est votre situation actuelle vis-à-vis du tabac ?</label>
     <div>
@@ -92,7 +103,7 @@
 
   <!-- Section 3 -->
   <div class="section">
-    <h2>3. Antécédents médicaux</h2>
+    <h3>3. Antécédents médicaux</h3>
 
     <label>Avez-vous déjà eu une maladie respiratoire chronique (BPCO, emphysème, asthme) ?</label>
     <div class="yesno">
@@ -121,10 +132,10 @@
 
   <!-- Section 4 -->
   <div class="section">
-    <h2>4. Expositions environnementales</h2>
+    <h3>4. Expositions environnementales</h3>
 
     <label>Dans quel pays habitez-vous ?</label>
-    <input type="text" name="pays">
+    <input type="text" name="pays_habite">
 
     <label>Travaillez-vous dans un environnement contenant de la poussière, de la suie ou des produits chimiques ?</label>
     <div class="yesno">
@@ -137,109 +148,35 @@
 </form>
 
 
-  <footer class="footer">
-  <div class="footer-left">
-    <h3><a herf="contact.html">Aide & Contact</a></h3>
-    <a>Nous joindre</a>
-    <a>Questions fréquentes</a>
-    <div class="social-icons">
-      <a href="#"><img src="x.png"></a>
-      <a href="#"><img src="instagram.png"></a>
-      <a href="#"><img src="facebook.png" ></a>
-      <a href="#"><img src="linkedin.png"></a>
-    </div>
-  </div>
+  <footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="#">Nous joindre</a><br>
+            <a href="#">Questions fréquentes</a>
+            <div class="icons">
+                <img src="bas_de_page/logo_x.png" alt="X">
+                <img src="bas_de_page/logo_insta.png" alt="Instagram">
+                <img src="bas_de_page/logo_youtube.png" alt="Youtube">
+                <img src="bas_de_page/logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="bas_de_page/logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
 
-  <div class="footer-right">
-    <div class="footer-institute">
-      <p>ORGANISATION DE<br>RECHERCHE SUR LE<br>CANCER DU POUMON</p>
-      <img src="logo.jpg" alt="Logo de l'institut">
-    </div>
-  </div>
-</footer>
+    <script>
+        const menu = document.getElementById('menu');
+        const sidebar = document.getElementById('sidebar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
 
 
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById("sidebar");
-      sidebar.classList.toggle("closed");
-    }
-
-    const links = document.querySelectorAll(".sidebar a");
-    links.forEach(link => {
-      link.addEventListener("click", function() {
-        links.forEach(l => l.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  </script>
-
-  <script>
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  // --- RÉCUPÉRATION DES DONNÉES ---
-  const fumeur = document.querySelector('input[name="situation_tabac"]:checked')?.value;
-  const fumeePassive = document.querySelector('input[name="fumee_passive"]:checked')?.value;
-  const maladieResp = document.querySelector('input[name="maladie_respiratoire"]:checked')?.value;
-  const autreCancer = document.querySelector('input[name="autre_cancer"]:checked')?.value;
-  const cancerFamille = document.querySelector('input[name="cancer_famille"]:checked')?.value;
-  const expositionPro = document.querySelector('input[name="exposition_pro"]:checked')?.value;
-  const produitsChimiques = document.querySelector('input[name="produits_chimiques"]:checked')?.value;
-  const dureeTabac = parseInt(document.querySelector('input[name="duree_tabac"]').value || 0);
-  const arreteAnnees = parseInt(document.querySelector('input[name="arrete_annees"]').value || 0);
-  const age = parseInt(document.querySelector('input[name="age"]').value || 0);
-  const poids = parseFloat(document.querySelector('input[name="poids"]').value || 0);
-  const taille = parseFloat(document.querySelector('input[name="taille"]').value || 0);
-  const pays = (document.querySelector('input[name="pays"]').value || "").toLowerCase();
-
-  // --- CALCUL DU SCORE ---
-  let score = 0;
-
-  // Tabagisme
-  if (fumeur === "actuellement") score += 3;
-  if (fumeur === "occasionnellement") score += 2;
-  if (fumeur === "arrete" && arreteAnnees < 10) score += 1;
-  if (fumeePassive === "oui") score += 1;
-
-  // Santé
-  if (maladieResp === "oui") score += 2;
-  if (autreCancer === "oui") score += 2;
-  if (cancerFamille === "oui") score += 2;
-
-  // Environnement / exposition
-  if (expositionPro === "oui") score += 2;
-  if (produitsChimiques === "oui") score += 1;
-  if (dureeTabac > 10) score += 2;
-
-  // Âge (le risque augmente après 50 ans)
-  if (age >= 50 && age < 65) score += 1;
-  if (age >= 65) score += 2;
-
-  // Poids/taille → IMC (si IMC <18.5 ou >30 = fragilité)
-  if (poids > 0 && taille > 0) {
-    const imc = poids / ((taille / 100) ** 2);
-    if (imc < 18.5 || imc > 30) score += 1;
-  }
-
-  // Pays avec forte pollution (exemples)
-  const paysPollues = ["inde", "chine", "pakistan", "bangladesh", "nigeria", "mexique"];
-  if (paysPollues.includes(pays)) score += 2;
-
-  // --- INTERPRÉTATION DU SCORE ---
-  let pageResultat = "";
-  if (score <= 4) {
-    pageResultat = "resultat_faible.html";
-  } else if (score <= 8) {
-    pageResultat = "resultat_modere.html";
-  } else {
-    pageResultat = "resultat_eleve.html";
-  }
-
-  // --- REDIRECTION ---
-  window.location.href = pageResultat;
-});
-</script>
 </body>
-
 </html>

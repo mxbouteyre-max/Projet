@@ -1,57 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Niveau de risque : Faible</title>
-
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 40px;
-    color: #222;
-  }
-  h1 {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 10px;
-  }
-  h2 {
-    text-align: center;
-    color: #0d2c5a;
-    margin-top: 0;
-  }
-  .profil, .conseils {
-    width: 70%;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 6px;
-  }
-  .profil {
-    background-color: #0d2c5a;
-    color: white;
-  }
-  .profil h3 {
-    text-align: center;
-  }
-  .conseils {
-    border: 2px solid #a23224 ;
-    background-color: #fff5f5;
-  }
-  .conseils h3 {
-    color: #a23224;
-    text-align: center;
-  }
-  ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-</style>
-
+  <meta charset="UTF-8">
+  <title>Niveau de risque : Faible</title>
+  <link rel="stylesheet" href="style/style_resultats.css">
 </head>
 <body>
-<h1>NIVEAU DE RISQUE : FAIBLE</h1>
+<header>
+         <!-- MENU LATERAL -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="info.html">Informations</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="carte.html">Carte interactive</a></li>
+                <li><a href="formulaire.html">Test personnel</a></li>
+            </ul>
+        </nav>
+        <button class="home-btn" onclick="window.location.href='index.html'">
+          <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+          <span>Accueil</span>
+        </button>
+    </header>
+
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+
+<h2>NIVEAU DE RISQUE : FAIBLE</h2>
 
 
 <div class="profil">
@@ -68,7 +47,7 @@
 Le cadre naturel de votre lieu de vie contribue à limiter les expositions nocives</p>
 </div>
 
-<div class="conseils">
+<div class="conseils_faible">
   <h3>Conseils</h3>
   <ul>
     <li>Continuez à privilégier les environnements bien ventilés</li>
@@ -80,5 +59,35 @@ Le cadre naturel de votre lieu de vie contribue à limiter les expositions nociv
     <li>Maintenez vos habitudes de vie saines</li>
   </ul>
 </div>
+
+<footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="#">Nous joindre</a><br>
+            <a href="#">Questions fréquentes</a>
+            <div class="icons">
+                <img src="bas_de_page/logo_x.png" alt="X">
+                <img src="bas_de_page/logo_insta.png" alt="Instagram">
+                <img src="bas_de_page/logo_youtube.png" alt="Youtube">
+                <img src="bas_de_page/logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="bas_de_page/logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const sidebar = document.getElementById('sidebar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
 </body>
 </html>
