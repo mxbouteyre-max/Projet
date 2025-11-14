@@ -176,7 +176,87 @@
             sidebar.classList.toggle('open');
         });
     </script>
+     <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("closed");
+    }
 
+    const links = document.querySelectorAll(".sidebar a");
+    links.forEach(link => {
+      link.addEventListener("click", function() {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+
+  <script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // --- RÉCUPÉRATION DES DONNÉES ---
+  const fumeur = document.querySelector('input[name="situation_tabac"]:checked')?.value;
+  const fumeePassive = document.querySelector('input[name="fumee_passive"]:checked')?.value;
+  const maladieResp = document.querySelector('input[name="maladie_respiratoire"]:checked')?.value;
+  const autreCancer = document.querySelector('input[name="autre_cancer"]:checked')?.value;
+  const cancerFamille = document.querySelector('input[name="cancer_famille"]:checked')?.value;
+  const expositionPro = document.querySelector('input[name="exposition_pro"]:checked')?.value;
+  const produitsChimiques = document.querySelector('input[name="produits_chimiques"]:checked')?.value;
+  const dureeTabac = parseInt(document.querySelector('input[name="duree_tabac"]').value || 0);
+  const arreteAnnees = parseInt(document.querySelector('input[name="arrete_annees"]').value || 0);
+  const age = parseInt(document.querySelector('input[name="age"]').value || 0);
+  const poids = parseFloat(document.querySelector('input[name="poids"]').value || 0);
+  const taille = parseFloat(document.querySelector('input[name="taille"]').value || 0);
+  const pays = (document.querySelector('input[name="pays"]').value || "").toLowerCase();
+
+  // --- CALCUL DU SCORE ---
+  let score = 0;
+
+  // Tabagisme
+  if (fumeur === "actuellement") score += 3;
+  if (fumeur === "occasionnellement") score += 2;
+  if (fumeur === "arrete" && arreteAnnees < 10) score += 1;
+  if (fumeePassive === "oui") score += 1;
+
+  // Santé
+  if (maladieResp === "oui") score += 2;
+  if (autreCancer === "oui") score += 2;
+  if (cancerFamille === "oui") score += 2;
+
+  // Environnement / exposition
+  if (expositionPro === "oui") score += 2;
+  if (produitsChimiques === "oui") score += 1;
+  if (dureeTabac > 10) score += 2;
+
+  // Âge (le risque augmente après 50 ans)
+  if (age >= 50 && age < 65) score += 1;
+  if (age >= 65) score += 2;
+
+  // Poids/taille → IMC (si IMC <18.5 ou >30 = fragilité)
+  if (poids > 0 && taille > 0) {
+    const imc = poids / ((taille / 100) ** 2);
+    if (imc < 18.5 || imc > 30) score += 1;
+  }
+
+  // Pays avec forte pollution (exemples)
+  const paysPollues = ["inde", "chine", "pakistan", "bangladesh", "nigeria", "mexique"];
+  if (paysPollues.includes(pays)) score += 2;
+
+  // --- INTERPRÉTATION DU SCORE ---
+  let pageResultat = "";
+  if (score <= 4) {
+    pageResultat = "resultat_faible.html";
+  } else if (score <= 8) {
+    pageResultat = "resultat_modere.html";
+  } else {
+    pageResultat = "resultat_eleve.html";
+  }
+
+  // --- REDIRECTION ---
+  window.location.href = pageResultat;
+});
+</script>
 
 </body>
 </html>
