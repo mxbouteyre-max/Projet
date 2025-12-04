@@ -2,10 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cancer du Poumon</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Cancer_du_poumon</title>
+    <link rel="stylesheet" href="style/cancer_du_poumon.css">
 </head>
+
 <body>
     <header>
          <!-- MENU LATERAL -->
@@ -23,33 +23,48 @@
                 <li><a href="formulaire.html">Test personnel</a></li>
             </ul>
         </nav>
-        <div class="account-buttons">
-            <button class="login" onclick="window.location.href='connexion.html'">Se connecter</button>
-            <button class="signup" onclick="window.location.href='inscription.html'">S’inscrire</button>
+        <div class="home-btn-container">
+            <button class="home-btn" onclick="window.location.href='index.html'">
+            <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+            <span>Accueil</span>
+            </button>
+            <button class="home-btn" onclick="window.location.href='info.html'">
+            <img src="haut_de_page/retour_logo.png" alt="Retour">
+            <span>Retour</span>
+            </button>
         </div>
     </header>
 
     <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
-    <h2>CANCER DU POUMON</h2>
-    <main>
-        <section class="content">
-            
+
+
+    <h2>Tout savoir sur le cancer du poumon</h2>
+
+    <div id="bloc-info">
+        <div class="texte-gauche">
             <p>
-                Bienvenue sur notre plateforme dédiée à la compréhension et à la prévention du cancer du poumon. 
-                Ici, nous croyons qu’un accès clair et ouvert à l’information peut réellement faire la différence. 
-                Trop souvent, les données sur la santé, la pollution et le tabac sont dispersées, complexes ou réservées aux spécialistes. 
-                Notre objectif est simple : rendre ces informations accessibles à tous, qu’il s’agisse d’un citoyen curieux, 
-                d’un professionnel de santé ou d’un chercheur.
+                Le cancer du poumon est l’un des cancers les plus fréquents dans le monde.
+                Il se développe à partir de cellules anormales dans les tissus des poumons,
+                qui commencent à se multiplier de manière incontrôlée. On distingue généralement
+                deux grands types : le cancer du poumon à petites cellules et celui à non petites
+                cellules, ce dernier étant le plus courant.
             </p>
-            <p>
-                Ce site vous permet d’explorer, à travers des données concrètes et des visualisations interactives, 
-                les liens étroits entre la consommation de tabac, la qualité de l’air et l’incidence du cancer du poumon.
-            </p>
-        </section>
-        <section class="image-section">
-            <img src="images/laboratoire1.jpg" alt="Chercheuse au microscope">
-        </section>
-    </main>
+        </div>
+        <img src="images/cancer_image1.png" class="image-droite">
+    </div>
+
+    <div id="bloc-risque">
+        <h3>QUELS SONT LES FACTEURS DE RISQUE ?</h3>
+        <p>
+            Le principal facteur de risque du cancer du poumon est le tabagisme.<br>
+            La fumée de cigarette contient de nombreuses substances cancérigènes qui
+            endommagent progressivement les cellules pulmonaires. Cependant, les non-fumeurs
+            peuvent également être touchés, notamment à cause du tabagisme passif, de la
+            pollution de l’air ou d’une exposition professionnelle à certaines substances
+            comme l’amiante.
+        </p>
+        <img src="images/cause_cancer.png" class="image-centre">
+    </div>
 
     <footer>
         <div class="contact">

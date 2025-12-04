@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Niveau de risque : Modéré</title>
-  <link rel="stylesheet" href="style/style_resultats.css">
+    <title>Carte</title>
+        <title>Cancer_du_poumon</title>
+    <link rel="stylesheet" href="style/carte.css">
+
 </head>
+
+    
+
 <body>
-  <header>
+    <header>
          <!-- MENU LATERAL -->
         <div class="menu" id="menu">
             <span></span>
@@ -22,42 +26,39 @@
                 <li><a href="formulaire.html">Test personnel</a></li>
             </ul>
         </nav>
-        <button class="home-btn" onclick="window.location.href='index.html'">
-          <img src="haut_de_page/accueil_logo.png" alt="Accueil">
-          <span>Accueil</span>
-        </button>
+        <div class="home-btn-container">
+            <button class="home-btn" onclick="window.location.href='index.html'">
+            <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+            <span>Accueil</span>
+            </button>
+        </div>
     </header>
 
     <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
 
-<h2>NIVEAU DE RISQUE : MODÉRÉ</h2>
+    <h2>Cartes interactives</h2>
 
-<div class="profil">
-  <h3>Profil type</h3>
-  <p>Fumeur léger ou ancien fumeur ayant arrêté récemment</p>
-  <ul>
-    <li>Exposition ponctuelle à la pollution, à la fumée passive ou à des produits chimiques.</li>
-    <li>Résidence en zone semi-urbaine ou proche d’axes routiers</li>
-    <li>Antécédents familiaux possibles de cancer du poumon.</li>
-    <li>Quelques symptômes bénins (toux occasionnelle, fatigue).</li>
-    <li>Mode de vie avec quelques facteurs aggravant</li>
-  </ul>
-  <p>Votre risque de développer un cancer du poumon est modéré. 
-La proximité avec des sources de pollution augmente légèrement votre exposition.</p>
+
+    
+
+<div id="cartes">
+    <h3 class="soustitre">Pollution de l’air (PM2.5) – données 2010 à 2018</h3>
+<iframe class="folium-map" src="PM25_interactive_clean.html"></iframe>
+
+<h3 class="soustitre">Pays où le cancer du poumon est le plus mortel chez les femmes (2018)</h3>
+<iframe class="folium-map" src="death_lung_female_map.html" ></iframe>
+
+<h3 class="soustitre">Pays où le cancer du poumon est le plus mortel chez les hommes (2018)</h3>
+<iframe class="folium-map" src="death_lung_male_map.html" ></iframe>
 </div>
 
-<div class="conseils_modere">
-  <h3>Conseils</h3>
-  <ul>
-    <li>Consultez un professionnel de santé pour un dépistage préventif (radiographie ou scanner faible dose selon l'âge)</li>
-    <li>Évitez toute reprise du tabac et limitez l’exposition aux polluants</li>
-    <li>Surveillez tout symptôme respiratoire persistant</li>
-    <li>Adoptez une alimentation riche en antioxydants et pratiquez une activité physique régulière.</li>
-    <li>Évitez les lieux enfumés et fortement pollués</li>
-    <li>Installez un détecteur de radon si vous vivez en zone rocheuse ou en sous-sol</li>
-    <li>Privilégiez les activités physiques de plein air dans des zones peu polluées</li>
-  </ul>
-</div>
+
+
+
+
+
+
+
 
     <footer>
         <div class="contact">
@@ -89,5 +90,8 @@ La proximité avec des sources de pollution augmente légèrement votre expositi
         });
     </script>
 
-</body>
+
+
+
+
 </html>

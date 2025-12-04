@@ -1,0 +1,333 @@
+/* === RESET DE BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- CONTENEUR DES BOUTONS --- */
+.home-btn-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px; /* espace entre les deux boutons */
+}
+
+/* --- BOUTONS ACCUEIL --- */
+.home-btn {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.home-btn img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s ease;
+}
+
+.home-btn:hover img {
+  transform: scale(1.1);
+}
+
+.home-btn span {
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+
+  /* --- HEADER --- */
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- MENU --- */
+.menu {
+  position: fixed;
+  left: 60px;
+  top: 20px;
+  width: 45px; /* zone large pour le clic */
+  height: 45px; /* idem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* espace constant entre les barres */
+  cursor: pointer;
+  z-index: 1001;
+  background-color: transparent;
+}
+
+
+.menu span {
+  display: block;
+  height: 1.25px;
+  width: 50px;
+  background-color: #445446; /* foncé quand fermé */
+  transition: background-color 0.3s;
+}
+
+.menu.active span {
+  background-color: #D9E9CF; /* vert clair quand ouvert */   
+  
+}
+
+
+
+
+/* --- SIDEBAR --- */
+nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 170px;
+  background-color: #445446; /* vert foncé */
+  padding-top: 80px;
+  transition: left 0.4s ease;
+  z-index: 1000;
+}
+
+nav.open {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: 0;
+}
+
+nav li {
+  margin: 60px 0; /* espace vertical entre les lignes */
+  display: flex;
+  align-items: center;
+  font-weight: 1px;           /* écriture bien fine */
+}
+
+nav li::before {
+  content: "•";               /* petit point */
+  color: #D9E9CF;             
+  font-size: 18px;
+  margin-right: 10px;         /* espace entre le point et le texte */
+  margin-left:20px;
+}
+
+
+nav a {
+  color: #D9E9CF; /* vert clair */
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding-left: 10px;    
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #D9E9CF;
+}
+
+
+h1 {
+  font-size: 18px;
+  font-weight:200;
+  letter-spacing: 1px;
+  font-variant: small-caps;
+  margin-bottom: 15px;
+  margin: 40px 190px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 1.9em;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;          /* aère un peu les lettres */
+    font-weight: 500;
+    transform: scaleY(1.15); /* étire verticalement */
+    padding: 10px;
+    margin-bottom: 30px;
+
+}
+
+
+
+
+/* ========== SECTIONS STATISTIQUES ========== */
+
+
+.stats-section{
+    margin: 30px 50px;
+}
+
+.stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;            /* 🔥 centrage vertical du texte et de l’image */
+    gap: 16px 36px;
+    margin-bottom: 6px;
+}
+
+/* Chaque élément interne peut s’étirer ou rétrécir */
+.stats-row > * {
+    flex: 1 1 340px;
+    min-width: 0;
+}
+
+/* Largeur relative */
+.stats-text, .stats-img {
+    width: 48%;
+    box-sizing: border-box;
+}
+
+/* Image propre */
+.stats-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Bloc texte */
+.stats-text {
+    align-self: center;             /* 🔥 centre le bloc verticalement lui aussi */
+    padding: 20px;
+    background: transparent;
+    color: #333;
+    line-height: 1.55;
+    border-radius: 6px;
+}
+
+/* Titre */
+.stats-text h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ---------- Responsive mobile ---------- */
+@media (max-width: 900px) {
+    .stats-row {
+        gap: 18px;
+        align-items: flex-start;     /* 🔥 on désactive le centrage en mobile pour garder un affichage propre */
+    }
+
+    .stats-text, .stats-img {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* On force l’image à repasser avant le texte en affichage empilé */
+    .stats-img {
+        order: -1;
+    }
+
+    .stats-text {
+        padding: 18px;
+    }
+}
+
+/* Grand écran */
+@media (min-width: 1600px) {
+    .stats-row > * {
+        flex-basis: 420px;
+    }
+}
+
+
+
+
+
+
+
+
+/* --- FOOTER --- */
+footer {
+  background-color: #f8f8f8;
+  padding-right: 70px;
+  padding-left: 100px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #ddd;
+}
+
+footer .contact{
+  margin-left : 90px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.icons img {
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  text-align: right;
+  margin-top: 10px;
+  align-items: center;       /* aligne verticalement le texte et le logo */
+  gap: 20px;
+}
+
+.footer-logo p {
+font-size: 16px;
+color: #333;
+line-height: 1.4;
+margin: 0;
+font-weight: 300;          /* écriture fine et élégante */
+text-align: center;         /* pour que le texte s’aligne à droite du logo */
+font-variant: small-caps;
+}
+
+.footer-logo img {
+  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+}

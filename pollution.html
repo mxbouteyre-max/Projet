@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancer_du_poumon</title>
+<link rel="stylesheet" href="style/pollution.css">
+   
+</head>
+
+<body>
+
+    <header>
+         <!-- MENU LATERAL -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="info.html">Informations</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="carte.html">Carte interactive</a></li>
+                <li><a href="formulaire.html">Test personnel</a></li>
+            </ul>
+        </nav>
+        <div class="home-btn-container">
+            <button class="home-btn" onclick="window.location.href='index.html'">
+            <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+            <span>Accueil</span>
+            </button>
+            <button class="home-btn" onclick="window.location.href='info.html'">
+            <img src="haut_de_page/retour_logo.png" alt="Retour">
+            <span>Retour</span>
+            </button>
+        </div>
+    </header>
+
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+
+    <h2>Tout savoir sur la pollution de  l’air</h2>
+
+    <div id="bloc-pollution" class="bloc-vert">
+
+        <img src="images/pm.png" class="image-pollution">
+
+        <h3 class="titre-section">LA POLLUTION, QU’EST-CE QUE C’EST ?</h3>
+
+
+        <p class="texte-intro">
+            La pollution de l’air (ou pollution atmosphérique) désigne la présence dans l’air de substances (gaz, particules, composés chimiques) en quantités anormales ou nuisibles pour la santé, l’environnement ou les biens matériels.
+        </p>
+
+        <div class="trait"></div>
+
+
+        <h4 class="soustitre-liste">Parmi les polluants les plus connus :</h4>
+        <ul class="liste-polluants">
+            <li>Particules en suspension (PM10, PM2,5) : particules solides ou liquides flottant dans l’air, souvent issues de la combustion ou de réactions chimiques dans l’atmosphère. Airparif+3Santé Publique France+3Ministère de la Transition écologique+3</li>
+            <li>Oxydes d’azote (NOx), dioxyde de soufre (SO2) : émissions liées aux transports, aux centrales électriques, aux industries ou au chauffage. Airparif+3Santé Publique France+3Canadian Cancer Society+3</li>
+            <li>Composés organiques volatils (COV), hydrocarbures : provenant des solvants, de la combustion, des carburants, des produits chimiques. Santé Publique France+2Canadian Cancer Society+2</li>
+            <li>Ozone troposphérique (O3) : polluant secondaire formé par réaction entre NOx et COV sous l’action du soleil. Santé Publique France+1</li>
+        </ul>
+
+        <div class="trait"></div>
+
+
+        <h4 class="soustitre-liste">Sur la santé, la pollution de l’air peut :</h4>
+        <ul class="liste-effets">
+            <li>Irriter les voies respiratoires, provoquer toux, difficulté à respirer, asthme, bronchite.</li>
+            <li>aggraver des maladies cardiaques ou pulmonaires.</li>
+            <li>contribuer à des décès prématurés liés aux maladies cardiovasculaires et respiratoires. </li>
+            <li>être liée à certains cancers, notamment le cancer du poumon : certains composants de la pollution de l’air sont classés comme cancérogènes.</li>
+        </ul>
+    </div>
+    <footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="contact.html">Nous joindre</a><br>
+            <a href="contact.html#faq">Questions fréquentes</a>
+
+            <div class="icons">
+                <img src="bas_de_page/logo_x.png" alt="X">
+                <img src="bas_de_page/logo_insta.png" alt="Instagram">
+                <img src="bas_de_page/logo_youtube.png" alt="Youtube">
+                <img src="bas_de_page/logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="bas_de_page/logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const sidebar = document.getElementById('sidebar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabagisme</title>
+    <link rel="stylesheet" href="style/prevention.css">
+</head>
+
+<body>
+    <header>
+         <!-- MENU LATERAL -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="sidebar">
+            <ul>
+                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="info.html">Informations</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="carte.html">Carte interactive</a></li>
+                <li><a href="formulaire.html">Test personnel</a></li>
+            </ul>
+        </nav>
+        <div class="home-btn-container">
+            <button class="home-btn" onclick="window.location.href='index.html'">
+            <img src="haut_de_page/accueil_logo.png" alt="Accueil">
+            <span>Accueil</span>
+            </button>
+        </div>
+    </header>
+
+    <h1>Organisation de recherche <br> sur le cancer du poumon</h1>
+
+    <h2>Les différentes préventions</h2>
+
+    
+
+    <div class="section">
+
+        <div class="block">
+        <p>Le cancer du poumon est l’un des plus meurtriers, mais aussi l’un des plus évitables. En comprenant les facteurs de risque comme le tabagisme, la pollution de l’air, l’exposition au radon ou les antécédents familiaux, chacun peut agir pour protéger sa santé.</p>
+        <p>Notre organisation vous aide à évaluer votre niveau de risque grâce à des outils simples, des explications claires et des cartes géographiques interactives qui montrent les zones les plus exposées. Que vous soyez fumeur, habitant d’une zone urbaine ou simplement soucieux de votre santé respiratoire, vous trouverez ici des conseils adaptés, des gestes préventifs, et des ressources fiables pour agir dès maintenant.</p>
+    </div>
+    <div class="trait"></div>
+
+        <!-- Prévention mode de vie -->
+        <div class="block">
+            <h4>PRÉVENTION LIÉE AU MODE DE VIE</h4>
+            <ul>
+                <li>Arrêter de fumer (tabac, cannabis, cigarette électronique)</li>
+                <li>Éviter le tabagisme passif (ne pas rester dans des lieux enfumés)</li>
+                <li>Adopter une alimentation équilibrée riche en fruits, légumes et antioxydants</li>
+                <li>Pratiquer une activité physique régulière</li>
+                <li>Réduire le stress, qui peut aggraver les comportements à risque</li>
+            </ul>
+        </div>
+        <div class="trait"></div>
+
+        <!-- Prévention environnement + image -->
+        <div class="block with-image">
+            <div class="text">
+                <h4>PRÉVENTION LIÉE À L’ENVIRONNEMENT</h4>
+                <ul>
+                    <li>Aérer son logement tous les jours, même en hiver</li>
+                    <li>Faire tester le radon dans les zones à risque (zones rocheuses, sous-sols)</li>
+                    <li>Éviter les sorties lors des pics de pollution</li>
+                    <li>Limiter l’exposition aux produits chimiques (solvants, amiante…)</li>
+                    <li>Utiliser des purificateurs ou des plantes dépolluantes</li>
+                </ul>
+            </div>
+            <img src="images/prevention_image_1.png" class="side-img">
+        </div>
+        <div class="trait"></div>
+
+        <!-- Prévention médicale -->
+        <div class="block">
+            <h4>PRÉVENTION MÉDICALE ET SURVEILLANCE</h4>
+            <ul>
+                <li>Consulter régulièrement en cas de toux persistante, essoufflement ou douleurs</li>
+                <li>Informer le médecin des antécédents familiaux</li>
+                <li>Dépistage recommandé après 50 ans pour les fumeurs</li>
+                <li>Scanner thoracique si conseillé par un professionnel de santé</li>
+            </ul>
+        </div>
+        <div class="trait"></div>
+
+        <!-- Prévention information -->
+        <div class="block">
+            <h4>PRÉVENTION PAR L’INFORMATION</h4>
+            <ul>
+                <li>S’informer sur les risques liés au tabac, à la pollution et au radon</li>
+                <li>Consulter les cartes locales de pollution et de radon</li>
+                <li>Participer à des campagnes de sensibilisation</li>
+            </ul>
+        </div>
+        <div class="trait"></div>
+
+        <!-- Bloc double infos + image -->
+        <div class="block with-image">
+            <div class="text">
+                <div class="info-block">
+                    <h4>TABAC INFO SERVICE</h4>
+                    <ul>
+                        <li>39 89 (prix d’un appel local)</li>
+                        <li>Aide gratuite pour arrêter de fumer</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h4>LIGNE CANCER INFO SERVICE – INCa</h4>
+                    <ul>
+                        <li>0 805 123 124 (appel gratuit)</li>
+                        <li>Informations sur prévention, dépistage, traitements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <img src="images/prevention_image_2.png" class="side-img">
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="contact">
+            <h3>Aide & Contact</h3>
+            <a href="contact.html">Nous joindre</a><br>
+            <a href="contact.html#faq">Questions fréquentes</a>
+
+            <div class="icons">
+                <img src="bas_de_page/logo_x.png" alt="X">
+                <img src="bas_de_page/logo_insta.png" alt="Instagram">
+                <img src="bas_de_page/logo_youtube.png" alt="Youtube">
+                <img src="bas_de_page/logo_linkedin.png" alt="Linkedin">
+            </div>
+        </div>
+        <div class="footer-logo">
+            <p>Organisation de<br> recherche sur le<br> cancer du poumon</p>
+            <img src="bas_de_page/logo_poumon.png" alt="Logo organisation">
+            
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu');
+        const sidebar = document.getElementById('sidebar');
+
+        menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            sidebar.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

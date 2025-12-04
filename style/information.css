@@ -1,0 +1,296 @@
+/* === RESET DE BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- BOUTON ACCUEIL --- */
+.home-btn {
+  display: flex;
+  background: none;
+  border: none;
+  vertical-align: middle;
+  padding: 8px;
+  cursor: pointer;
+  position: fixed;   
+  top: 20px;         
+  right: 20px;        
+  z-index: 1001;     
+  flex-direction: column; 
+  align-items: center;    
+  gap: 5px;          
+}
+
+.home-btn span {
+  font-size: 12px;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+
+
+.home-btn img {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  transition: transform 0.2s ease; /* zoom fluide */
+}
+
+/* effet au survol : juste zoomer */
+.home-btn:hover img {
+  transform: scale(1.1);
+}
+
+.home-btn:hover {
+  background: none;
+  outline: none;
+}
+
+
+  /* --- HEADER --- */
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+}
+
+/* --- MENU --- */
+.menu {
+  position: fixed;
+  left: 60px;
+  top: 20px;
+  width: 45px; /* zone large pour le clic */
+  height: 45px; /* idem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* espace constant entre les barres */
+  cursor: pointer;
+  z-index: 1001;
+  background-color: transparent;
+}
+
+
+.menu span {
+  display: block;
+  height: 1.25px;
+  width: 50px;
+  background-color: #445446; /* foncé quand fermé */
+  transition: background-color 0.3s;
+}
+
+.menu.active span {
+  background-color: #D9E9CF; /* vert clair quand ouvert */   
+  
+}
+
+
+
+
+/* --- SIDEBAR --- */
+nav {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  width: 170px;
+  background-color: #445446; /* vert foncé */
+  padding-top: 80px;
+  transition: left 0.4s ease;
+  z-index: 1000;
+}
+
+nav.open {
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0px;
+  padding-right: 20px;
+  margin-left: 0;
+}
+
+nav li {
+  margin: 60px 0; /* espace vertical entre les lignes */
+  display: flex;
+  align-items: center;
+  font-weight: 1px;           /* écriture bien fine */
+}
+
+nav li::before {
+  content: "•";               /* petit point */
+  color: #D9E9CF;             
+  font-size: 18px;
+  margin-right: 10px;         /* espace entre le point et le texte */
+  margin-left:20px;
+}
+
+
+nav a {
+  color: #D9E9CF; /* vert clair */
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  padding-left: 10px;    
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #D9E9CF;
+}
+
+
+h1 {
+  font-size: 18px;
+  font-weight:200;
+  letter-spacing: 1px;
+  font-variant: small-caps;
+  margin-bottom: 15px;
+  margin: 40px 190px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 1.9em;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;          /* aère un peu les lettres */
+    font-weight: 500;
+    transform: scaleY(1.15); /* étire verticalement */
+}
+
+.bouton {
+  width: 35px;
+  height: 35px;
+  background-color: #1c1c1c;
+  mask: url('https://cdn-icons-png.flaticon.com/512/25/25694.png') center/contain no-repeat;
+  -webkit-mask: url('https://cdn-icons-png.flaticon.com/512/25/25694.png') center/contain no-repeat;
+  display: inline-block;
+}
+
+
+
+/* === SECTION DES CARTES === */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 260px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card p:first-of-type a {
+  display: block;
+  font-weight: 600;
+  color: #1c1c1c;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.card p:first-of-type a:hover {
+  color: #0050ff;
+}
+
+.card p:last-of-type {
+  padding: 0 1rem 1rem 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+  background-color: #f8f8f8;
+  padding-right: 70px;
+  padding-left: 100px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 1px solid #ddd;
+}
+
+footer .contact{
+  margin-left : 90px;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.icons img {
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  text-align: right;
+  margin-top: 10px;
+  align-items: center;       /* aligne verticalement le texte et le logo */
+  gap: 20px;
+}
+
+.footer-logo p {
+font-size: 16px;
+color: #333;
+line-height: 1.4;
+margin: 0;
+font-weight: 300;          /* écriture fine et élégante */
+text-align: center;         /* pour que le texte s’aligne à droite du logo */
+font-variant: small-caps;
+}
+
+.footer-logo img {
+  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
