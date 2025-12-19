@@ -18,11 +18,11 @@
         </div>
         <nav id="sidebar">
             <ul>
-                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="stat.php">Statistiques</a></li>
                 <li><a href="info.html">Informations</a></li>
                 <li><a href="prevention.html">Prévention</a></li>
                 <li><a href="carte.html">Carte interactive</a></li>
-                <li><a href="formulaire.html">Test personnel</a></li>
+                <li><a href="formulaire.php">Test personnel</a></li>
             </ul>
         </nav>
         <div class="home-btn-container">
@@ -41,39 +41,118 @@
 
     <h2>Tout savoir sur la pollution de  l’air</h2>
 
+    
+
     <div id="bloc-pollution" class="bloc-vert">
 
         <img src="images/pm.png" class="image-pollution">
 
-        <h3 class="titre-section">LA POLLUTION, QU’EST-CE QUE C’EST ?</h3>
+        <h3>La pollution de l’air et ses impacts</h3>
 
+        <!-- Bloc 1 : Introduction -->
+        <div id="bloc-info">
+            <div class="texte-gauche">
+                <p>
+                    La pollution de l’air désigne la présence dans l’atmosphère de substances (gaz, particules, composés chimiques) 
+                    en quantités anormales ou nuisibles pour la santé, l’environnement ou les biens matériels. 
+                    Elle résulte principalement des activités humaines, comme les transports, l’industrie, le chauffage ou l’agriculture.
+                </p>
+                <p>
+                    Chaque année, la pollution atmosphérique cause plus de 4 millions de décès prématurés dans le monde selon l’<a href="https://www.who.int/fr/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health" target="_blank">OMS</a>. 
+                    Cela correspond à près d’une personne sur dix vivant dans des zones fortement polluées. La concentration de particules fines (PM2,5) dépasse régulièrement les seuils recommandés par l’OMS dans de nombreuses grandes villes.
+                </p>
+                <p>
+                    La pollution ne se limite pas aux grandes métropoles : les petites villes et zones rurales peuvent être touchées par la pollution agricole (pesticides, ammoniaque) ou par le transport de poussières fines transportées par le vent.
+                </p>
 
-        <p class="texte-intro">
-            La pollution de l’air (ou pollution atmosphérique) désigne la présence dans l’air de substances (gaz, particules, composés chimiques) en quantités anormales ou nuisibles pour la santé, l’environnement ou les biens matériels.
-        </p>
+            </div>
+        </div>
 
         <div class="trait"></div>
 
+        <!-- Bloc 2 : Les principaux polluants -->
+        <h3>Les principaux polluants de l’air</h3>
+        <div class="bloc-info">
+            <p>
+                La pollution de l’air est composée de différents polluants, chacun ayant des effets spécifiques sur la santé :
+            </p>
+            <ul class="liste-polluants">
+                <li><strong>Particules en suspension (PM10, PM2,5)</strong> : ces particules très fines pénètrent profondément dans les poumons, provoquant inflammation et irritation. Elles sont souvent produites par la combustion de carburants (voitures, industries, chauffage domestique) et peuvent transporter des substances toxiques. Selon l’<a href="https://www.airparif.asso.fr/" target="_blank">Airparif</a>, les pics de PM2,5 à Paris peuvent dépasser 100 µg/m³, soit 4 fois le seuil OMS.</li>
+                <li><strong>Oxydes d’azote (NOx), dioxyde de soufre (SO2)</strong> : ces gaz proviennent surtout des moteurs thermiques et des centrales électriques. L’exposition chronique peut provoquer bronchite, asthme et aggravation de maladies cardiaques. <a href="https://www.ecologie.gouv.fr/" target="_blank">Ministère de la Transition écologique</a></li>
+                <li><strong>Composés organiques volatils (COV)</strong> : issus de solvants, carburants, produits chimiques, ils participent à la formation d’ozone troposphérique et peuvent provoquer irritation des yeux, du nez et de la gorge. <a href="https://www.canada.ca/fr/sante-publique/services/maladies/cancer.html" target="_blank">Canadian Cancer Society</a></li>
+                <li><strong>Ozone troposphérique (O3)</strong> : polluant secondaire formé par réaction entre NOx et COV sous l’action du soleil, l’ozone est particulièrement irritant pour les voies respiratoires et peut diminuer la capacité pulmonaire.</li>
+            </ul>
 
-        <h4 class="soustitre-liste">Parmi les polluants les plus connus :</h4>
-        <ul class="liste-polluants">
-            <li>Particules en suspension (PM10, PM2,5) : particules solides ou liquides flottant dans l’air, souvent issues de la combustion ou de réactions chimiques dans l’atmosphère. Airparif+3Santé Publique France+3Ministère de la Transition écologique+3</li>
-            <li>Oxydes d’azote (NOx), dioxyde de soufre (SO2) : émissions liées aux transports, aux centrales électriques, aux industries ou au chauffage. Airparif+3Santé Publique France+3Canadian Cancer Society+3</li>
-            <li>Composés organiques volatils (COV), hydrocarbures : provenant des solvants, de la combustion, des carburants, des produits chimiques. Santé Publique France+2Canadian Cancer Society+2</li>
-            <li>Ozone troposphérique (O3) : polluant secondaire formé par réaction entre NOx et COV sous l’action du soleil. Santé Publique France+1</li>
-        </ul>
+        </div>
 
         <div class="trait"></div>
 
+        <!-- Bloc 3 : Effets sur la santé -->
+        <h3>Les effets de la pollution sur la santé</h3>
+        <div class="texte-gauche">
+            <p>
+                Les effets de la pollution sur la santé sont nombreux et parfois sévères :
+            </p>
+            <ul class="liste-effets">
+                <li>Irritation des voies respiratoires : toux, essoufflement, crises d’asthme et bronchites fréquentes.</li>
+                <li>Aggravation des maladies cardiovasculaires : infarctus et accidents vasculaires plus fréquents lors des pics de pollution.</li>
+                <li>Contribution aux décès prématurés : environ 4,2 millions de décès dans le monde chaque année, soit un décès toutes les 8 secondes selon l’OMS.</li>
+                <li>Risque accru de certains cancers : certains composants sont classés cancérogènes, en particulier le cancer du poumon. Les fumeurs exposés à la pollution ont un risque encore plus élevé.</li>
+            </ul>
+            <p>
+                Les enfants, les personnes âgées et les personnes déjà malades sont particulièrement vulnérables. Même une exposition courte à de forts niveaux de pollution peut provoquer une aggravation des symptômes respiratoires.
+            </p>
 
-        <h4 class="soustitre-liste">Sur la santé, la pollution de l’air peut :</h4>
-        <ul class="liste-effets">
-            <li>Irriter les voies respiratoires, provoquer toux, difficulté à respirer, asthme, bronchite.</li>
-            <li>aggraver des maladies cardiaques ou pulmonaires.</li>
-            <li>contribuer à des décès prématurés liés aux maladies cardiovasculaires et respiratoires. </li>
-            <li>être liée à certains cancers, notamment le cancer du poumon : certains composants de la pollution de l’air sont classés comme cancérogènes.</li>
-        </ul>
+        </div>
+
+        <div class="trait"></div>
+
+        <!-- Bloc 4 : Mesures de prévention -->
+        <h3>Comment réduire son exposition ?</h3>
+        <div class="texte-gauche">
+            <p>
+                Pour limiter son exposition, il est recommandé de :
+            </p>
+            <ul>
+                <li>Surveiller la qualité de l’air via des applications ou sites spécialisés et réduire les activités extérieures lors des pics de pollution.</li>
+                <li>Privilégier les transports en commun, le vélo ou la marche plutôt que les véhicules individuels polluants.</li>
+                <li>Améliorer la ventilation et limiter les sources de pollution intérieure : fumée de tabac, bougies parfumées, produits chimiques ménagers.</li>
+                <li>Participer à des politiques locales ou nationales de réduction de la pollution : zones à faibles émissions, contrôle industriel, végétalisation urbaine.</li>
+            </ul>
+            <p>
+                Chaque geste compte : réduire son empreinte carbone personnelle et se protéger des pics de pollution peut diminuer considérablement les risques pour la santé.
+            </p>
+
+        </div>
+        </div>
+
+<!-- Bloc 5 : Ressources utiles -->
+<div id="bloc-ressources" class="bloc-bleu">
+    <h3>Ressources utiles</h3>
+    <div class="card-container">
+        <div class="card">
+            <h4>Airparif</h4>
+            <p>Informations sur la qualité de l’air à Paris et en Île-de-France.</p>
+            <a href="https://www.airparif.asso.fr/" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>Santé Publique France</h4>
+            <p>Guides et études sur la pollution de l’air et ses effets sur la santé.</p>
+            <a href="https://www.santepubliquefrance.fr/" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>OMS - Pollution et santé</h4>
+            <p>Statistiques mondiales et recommandations pour réduire l’exposition.</p>
+            <a href="https://www.who.int/fr/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>Canadian Cancer Society</h4>
+            <p>Liens entre pollution et cancer, conseils de prévention.</p>
+            <a href="https://www.cancer.ca/fr-ca/cancer-information/cancer-type/lung/lung-cancer.aspx" target="_blank">Voir le site</a>
+        </div>
     </div>
+</div>
+
     <footer>
         <div class="contact">
             <h3>Aide & Contact</h3>

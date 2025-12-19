@@ -1,5 +1,5 @@
 <?php
-require 'bd.php';
+require_once("bd.php");
 $pdo = getBD();
 
 $email = $_POST['email'] ?? '';

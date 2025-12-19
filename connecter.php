@@ -1,5 +1,5 @@
 <?php
-require 'bd.php';
+require_once("bd.php");
 session_start();
 
 $pdo = getBD();
@@ -13,7 +13,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($user && password_verify($mdp, $user['mdp'])) {
     $_SESSION['user'] = $user['mail'];
-    echo "<script>alert('Connexion réussie !');window.location='index.php';</script>";
+    echo "<script>alert('Connexion réussie !');window.location='index.html';</script>";
 } else {
     echo "<script>alert('Identifiants incorrects.');window.location='connexion.html';</script>";
 }

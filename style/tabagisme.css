@@ -195,7 +195,7 @@ h2 {
 
 #bloc-tabac p {
     line-height: 1.6;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 /* ======== LIGNE PRINCIPALE ======== */
@@ -224,6 +224,8 @@ h2 {
 .col-gauche img {
     width: 100%;
     border-radius: 10px;
+    margin-bottom: 55px;
+    margin-top: 40px;
 }
 
 /* ======== COLONNE DROITE ======== */
@@ -248,6 +250,41 @@ h2 {
     width: 100%;
     border-radius: 10px;
 }
+
+
+#bloc-ressources {
+  margin : 20px 50px;
+}
+
+#bloc-ressources h3 {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+.card a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 
 /* --- FOOTER --- */

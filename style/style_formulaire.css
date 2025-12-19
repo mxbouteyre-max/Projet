@@ -179,12 +179,15 @@ h2 {
 
 h2~p{
     text-align:center;
+    margin: 2px 70px;
+    line-height: 1.5;
 }
 
 h3{
     font-size: 1.3em;
     margin-bottom: 15px;
     color: #fff;
+    text-decoration: underline;
 }
 
 label {
@@ -192,6 +195,26 @@ label {
     margin-top: 12px;
     font-weight: 500;
     color: #fff;
+}
+
+div + label {
+    margin-top: 23px;
+    font-weight: bold;
+}
+
+h3 + label {
+    margin-top: 23px;
+    font-weight: bold;
+}
+
+input + label {
+    margin-top: 23px;
+    font-weight: bold;
+}
+
+select + label {
+    margin-top: 23px;
+    font-weight: bold;
 }
 
 input[type="text"],

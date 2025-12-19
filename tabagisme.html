@@ -16,11 +16,11 @@
         </div>
         <nav id="sidebar">
             <ul>
-                <li><a href="stat.html">Statistiques</a></li>
+                <li><a href="stat.php">Statistiques</a></li>
                 <li><a href="info.html">Informations</a></li>
                 <li><a href="prevention.html">Prévention</a></li>
                 <li><a href="carte.html">Carte interactive</a></li>
-                <li><a href="formulaire.html">Test personnel</a></li>
+                <li><a href="formulaire.php">Test personnel</a></li>
             </ul>
         </nav>
         <div class="home-btn-container">
@@ -39,45 +39,118 @@
 
     <h2>Tout savoir sur le tabagisme</h2>
 
-    <div id="bloc-tabac">
-        <h3>Qu’est-ce que le tabagisme ?</h3>
-        <p>
-            Le tabagisme, c’est l’acte de fumer du tabac (cigarettes, cigares, pipes) ou d’inhaler ses produits (fumée).
-            Le tabac contient de nombreuses substances chimiques nocives dont la nicotine, responsable de l’addiction,
-            et des substances cancérogènes (qui favorisent le cancer).
-        </p>
+<div id="bloc-tabac">
+    <h3>Qu’est-ce que le tabagisme ?</h3>
+    <p>
+        Le tabagisme désigne la consommation de tabac sous différentes formes 
+        (cigarettes, cigares, pipes ou tabac chauffé), ainsi que l’inhalation de la fumée produite.
+        Cette fumée contient plus de 7 000 substances chimiques, dont plusieurs dizaines sont
+        reconnues comme cancérogènes.
+    </p>
+    <p>
+        La nicotine, principale substance addictive du tabac, agit directement sur le cerveau
+        en procurant une sensation de plaisir ou d’apaisement temporaire. Cette action rapide
+        explique pourquoi le tabagisme entraîne une dépendance forte, à la fois physique et psychologique.
+    </p>
 
     <div class="ligne">
-    
-    <!-- Colonne gauche -->
-    <div class="col-gauche">
-        <img src="images/tabac_prev.png" alt="Prévention tabac">
+
+        <!-- Colonne gauche -->
+        <div class="col-gauche">
+            <img src="images/tabac_prev.png" alt="Prévention tabac" class="image-droite">
+             <section class="bloc-texte">
+                <h4>Le tabagisme passif : un danger sous-estimé</h4>
+                <p>
+                    Le tabagisme passif correspond à l’inhalation involontaire de la fumée de tabac
+                    par des personnes non-fumeuses. Cette fumée provient à la fois de la cigarette
+                    allumée et de la fumée expirée par le fumeur.
+                </p>
+                <p>
+                    Contrairement à une idée reçue, la fumée inhalée passivement est tout aussi
+                    nocive : elle contient les mêmes substances toxiques et cancérogènes.
+                    Une exposition régulière augmente le risque de maladies respiratoires,
+                    de maladies cardiovasculaires et de cancer du poumon chez les non-fumeurs.
+                </p>
+                <p>
+                    Chez les enfants, le tabagisme passif peut provoquer ou aggraver de l’asthme,
+                    des infections respiratoires fréquentes et des troubles du développement pulmonaire.
+                    C’est pourquoi l’interdiction de fumer dans les lieux publics et à domicile
+                    en présence d’enfants est une mesure de santé essentielle.
+                </p>
+            </section>
+        </div>
+
+        <!-- Colonne droite -->
+        <div class="col-droite">
+
+            <section class="bloc-texte">
+                <h4>Addiction et dépendance</h4>
+                <p>
+                    La nicotine atteint le cerveau en quelques secondes après l’inhalation.
+                    Elle stimule la libération de dopamine, un neurotransmetteur associé au plaisir
+                    et à la récompense. Avec le temps, le cerveau s’habitue et réclame des doses
+                    de plus en plus fréquentes pour ressentir les mêmes effets.
+                </p>
+                <p>
+                    Lors de l’arrêt, des symptômes de sevrage peuvent apparaître :
+                    irritabilité, anxiété, troubles du sommeil, difficultés de concentration ou
+                    envie irrépressible de fumer. C’est pourquoi l’arrêt est souvent facilité par
+                    des aides comme les substituts nicotiniques (patchs, gommes, pastilles)
+                    ou un accompagnement médical.
+                </p>
+            </section>
+
+            <img src="images/cancer_schema.png" alt="Schéma des effets du tabac" class="image-schema">
+
+            <section class="bloc-texte">
+                <h4>Les risques du tabagisme</h4>
+                <p>
+                    Le tabagisme est un facteur de risque majeur pour de nombreuses maladies.
+                    Il est directement impliqué dans le développement de cancers, en particulier
+                    le cancer du poumon, mais aussi ceux de la gorge, de la bouche, de l’œsophage,
+                    du pancréas ou de la vessie.
+                </p>
+                <ul>
+                    <li>Augmentation du risque de maladies respiratoires chroniques (bronchite chronique, BPCO).</li>
+                    <li>Risque accru de maladies cardiovasculaires (infarctus, AVC).</li>
+                    <li>Diminution de l’espérance de vie, même à faible consommation quotidienne.</li>
+                </ul>
+            </section>
+            
+            <img src="images/fumee_passive.jpg" alt="Exposition fumée passive" class="image-schema">
+           
+
+        </div>
     </div>
-
-    <!-- Colonne droite -->
-    <div class="col-droite">
-        
-        <section class="bloc-texte">
-            <h4>Addiction et dépendance</h4>
-            <p>
-                La nicotine agit très vite dans le cerveau, donnant une sensation de plaisir ou de soulagement à court terme, mais elle crée une forte dépendance. Les symptômes de sevrage (irritabilité, envie forte, anxiété, troubles du sommeil) rendent souvent l’arrêt difficile. C’est pour ça qu’on utilise souvent des substituts (patchs, gommes, etc.) ou un accompagnement médical.
-            </p>
-        </section>
-
-        <img src="images/cancer_schema.png" alt="Schéma du cancer" class="image-schema">
-
-        <section class="bloc-texte">
-            <h4>Fumer présente de nombreux risques :</h4>
-            <ul>
-                <li>Le tabagisme est l’un des principaux facteurs de cancer du poumon.</li>
-                <li>Il augmente aussi le risque de cancers de la gorge, de la bouche, de l’œsophage, de la vessie et d’autres organes.</li>
-            </ul>
-        </section>
-
-    </div>
-
 </div>
+
+<!-- Bloc 5 : Ressources utiles -->
+<div id="bloc-ressources" class="bloc-bleu">
+    <h3>Ressources utiles</h3>
+    <div class="card-container">
+        <div class="card">
+            <h4>Santé Publique France</h4>
+            <p>Guides et études sur le tabac et ses effets sur la santé.</p>
+            <a href="https://www.santepubliquefrance.fr/" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>OMS - Tabac</h4>
+            <p>Informations et statistiques mondiales sur le tabagisme.</p>
+            <a href="https://www.who.int/fr/news-room/fact-sheets/detail/tobacco" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>Institut National du Cancer</h4>
+            <p>Informations sur la prévention et les risques liés au tabac.</p>
+            <a href="https://www.e-cancer.fr/Patients-et-proches/Prevention/Tous-les-facteurs-de-risque/Tabac" target="_blank">Voir le site</a>
+        </div>
+        <div class="card">
+            <h4>Tabac Info Service</h4>
+            <p>Accompagnement et conseils pour arrêter de fumer.</p>
+            <a href="https://www.tabac-info-service.fr/" target="_blank">Voir le site</a>
+        </div>
     </div>
+</div>
+
 
 
     <footer>

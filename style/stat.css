@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
 }
 
+
 /* --- CONTENEUR DES BOUTONS --- */
 .home-btn-container {
   position: fixed;
@@ -176,6 +177,82 @@ h2 {
     margin-bottom: 30px;
 
 }
+
+h3 {
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 21px;
+}
+
+.data_title {
+  margin-top: 40px;
+  margin-left: 60px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  margin-left: 50px;
+  margin-top: 12px;
+  font-size: 0.95em;
+}
+
+
+.tableau {
+  margin : 10px 30px;
+  overflow-x: auto;
+}
+
+/* Tableau */
+table {
+  padding : 30px 20px;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Cellules */
+td, th {
+    border: 1px solid #cfd9e3;
+    padding: 6px 10px;
+    text-align: center;
+    max-width: 140px;       /* largeur max d’une colonne */
+    white-space: nowrap;    /* empêche le retour à la ligne */
+    overflow: hidden;       /* cache ce qui dépasse */
+    text-overflow: ellipsis;/* ajoute ... */
+}
+
+
+
+/* Première ligne (en-tête CSV) */
+table tr:first-child {
+    background-color: #1f5fa8;
+    color: white;
+    font-weight: bold;
+}
+
+/* Autres lignes */
+table tr:not(:first-child) td {
+    background-color: #eaf2fb;
+}
+
+/* Effet léger au survol */
+table tr:hover td {
+    background-color: #dbe9f7;
+}
+
+/* Lien de téléchargement */
+.download-link {
+    font-size: 0.85em;
+    color: #1f5fa8;
+    text-decoration: none;
+}
+
+.download-link:hover {
+    text-decoration: underline;
+}
+
+
 
 
 

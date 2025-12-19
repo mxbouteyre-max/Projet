@@ -258,6 +258,34 @@ li {
 
 }
 
+p {
+  line-height: 1.5;
+}
+
+h2 ~ p {
+  margin: 5px 130px;
+}
+
+.block ul {
+  line-height: 1.5;
+}
+
+.block.with-image ul {
+  line-height: 1.5;
+}
+
+h4 + p {
+  margin-bottom: 10px;
+}
+
+h2 + p {
+  margin-top: 20px;
+}
+
+div > h4 {
+  margin-top: 20px;
+}
+
 /* Blocs avec image à côté */
 .section .block.with-image {
     flex-direction: row;

@@ -193,7 +193,7 @@ h2 {
 #bloc-info .texte-gauche {
     width: 65%;
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 #bloc-info .image-droite {
@@ -202,22 +202,23 @@ h2 {
 }
 
 /* ------------------ BLOC FACTEURS ------------------ */
-#bloc-risque {
+.bloc-risque {
     width: 75%;
-    margin: 40px auto;
+    margin: auto;
+    margin-top: 20px;
     background-color: #c6d0e3;
     border-radius: 10px;
     padding: 40px 50px;
 }
 
-#bloc-risque h3 {
+.bloc-risque h3 {
     font-size: 22px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-#bloc-risque p {
-    line-height: 1.6;
+.bloc-risque p {
+    line-height: 1.5;
     font-size: 17px;
 }
 
@@ -227,6 +228,44 @@ h2 {
     margin: 30px auto 0 auto;
     border-radius: 10px;
 }
+
+.liste {
+  line-height: 1.5;
+}
+
+#bloc-ressources {
+  margin : 20px 50px;
+}
+
+#bloc-ressources h3 {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  flex: 1 1 200px;
+}
+
+.card h4 {
+  margin-top: 0;
+}
+
+.card a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 
 /* --- FOOTER --- */
